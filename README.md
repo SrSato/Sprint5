@@ -1,6 +1,6 @@
 # WebSocket Chat
 
-A simple chat with rooms.
+A very simple chat with rooms. 
 
 ## Dependences
 
