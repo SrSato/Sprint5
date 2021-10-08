@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Estaticorrrrl</title>
+  <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+  <h1>Nescafib 2021</h1>
+    <div class="rooms">
+      Escoge una sala o inventatela:
+      <ul id="roomList"></ul>
+      <div class="travel">
+        <input type="text" id="goToRoom" >
+        <input type="button" id="leave" value="Ir a la sala" >
+      </div>
+    </div>
+    <div class="room">
+      <ul id="msgList"></ul>
+    </div>
+
+
+  <div class="write">
+    <input type="text" id="msgToSend">
+    <input type="button" id="send" value="Enviar">
+  </div>
+</body>
+<!--- SCRIPTS --->
+<script>
+    let currentRoom = '{{ room }}';
+    const username = '{{ username }}';
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="main.js"></script>
+
+
+
+</html>
