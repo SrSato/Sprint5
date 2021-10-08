@@ -21,7 +21,8 @@ send.addEventListener('click',(event)=>{
 leave.addEventListener('click',(event)=>{
   if (goToRoom.value){
     let newRoom=goToRoom.value;
-    socket.emit('bye', currentRoom, username);
+    let oldRoom=currentRoom;
+    socket.emit('bye', oldRoom, username);
     socket.emit('hi',newRoom, username);
     currentRoom=newRoom;
   }

@@ -42,16 +42,21 @@ exports.listen = (server) => {
         message: `${username} acaba de entrar en la sala`
       });
 
-      if(!isNew){
-        let oldMessages = await Message.find({room: room});
-        oldMessages.forEach((element) => {
-          socket.emit('new message',{
-            username: element.username,
-            room: element.room,
-            message: element.message
-          })
-        });        
-      }
+
+      socket.emit('new message',{
+        username: "admin",
+        room: room,
+        message: `Resumen de lo dicho hasta ahora en ${room}... `
+      })
+      let oldMessages = await Message.find({room: room});
+      oldMessages.forEach((element) => {
+        socket.emit('new message',{
+          username: element.username,
+          room: element.room,
+          message: element.message
+        })
+      });
+
 
       socket.emit('new message',{
         username: "admin",
