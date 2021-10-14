@@ -4,7 +4,7 @@ let leave = document.getElementById('leave');
 let msgList = document.getElementById('msgList');
 let roomList = document.getElementById('roomList');
 
-let socket=io();
+let socket=io("http://localhost:3000");
 socket.emit('hi', currentRoom, username);
 
 send.addEventListener('click',(event)=>{

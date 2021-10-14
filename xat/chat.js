@@ -12,7 +12,12 @@ function reviewListedRooms(candidate){
 }
 
 exports.listen = (server) => {
-  const io = socketio(server);
+  const io = socketio(server,{
+    cors: {
+      origin: '*',
+    }
+  });
+
 
   io.on('connection', (socket) => {
     console.log(`A user connected in socket: ${socket.id}`);
