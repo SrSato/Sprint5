@@ -35,7 +35,7 @@ node server.js
 ```
 - [x] Enjoy!
 
-##ToDo
+## ToDo
 - [] Unique nicks
 - [] Auth
 - [] Better UI
