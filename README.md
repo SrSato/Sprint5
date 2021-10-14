@@ -38,6 +38,6 @@ node server.js
 ## ToDo
 - [] Unique nicks
 - [] Auth
-- [] Better UI
+- [] Better UI (CSS and grid)
 - [] Date in messages
 - [] Better funcionalities ("is typing", etc...)
